@@ -17,7 +17,7 @@ function BlogCard({blogs, pageSize, selectedCategory, currentPage}) {
     {
         filteredBlogs.length > 0 ? (
             filteredBlogs.map((blog) => (
-      <Link key={blog.id} className='p-5 shadow-lg hover:shadow-2xl'>
+      <Link key={blog.id} to={`/blogs/${blog.id}`} className='p-5 shadow-lg hover:shadow-2xl'>
         <div>
           <img src={blog.image} alt='' className='w-full' />
         </div>
@@ -35,7 +35,7 @@ function BlogCard({blogs, pageSize, selectedCategory, currentPage}) {
     ))
         ) : 
           blogs.map((blog) => (
-            <Link key={blog.id} className='p-5 shadow-lg hover:shadow-2xl'>
+            <Link key={blog.id} to={`/blogs/${blog.id}`} className='p-5 shadow-lg hover:shadow-2xl'>
         <div>
           <img src={blog.image} alt='' className='w-full' />
         </div>

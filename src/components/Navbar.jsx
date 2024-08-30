@@ -3,10 +3,12 @@ import { NavLink } from "react-router-dom"
 // react icons
 import { FaFacebook, FaDribbble, FaTwitter, FaBars, FaXmark } from "react-icons/fa6";
 import { useState } from "react";
+import Modal from "./Modal";
 
 function Navbar() {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -20,6 +22,16 @@ function Navbar() {
         {path: "/blogs", link: "Blogs"},
         {path: "/contact", link: "Contact"},
     ]
+
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    }
+    const closeModal = () => {
+        setIsModalOpen(false);
+    }
+
+
   return (
     <>
         <header className=" backdrop-blur-md bg-gradient-to-r from-black via-gray-900 to-black bg-black bg-opacity-50 text-white fixed top-0 left-0 right-0 z-50  shadow-xl">
@@ -50,10 +62,16 @@ function Navbar() {
                     <a href="/" className=" hover:text-orange-500"><FaFacebook/></a>
                     <a href="/" className=" hover:text-orange-500"><FaDribbble/></a>
                     <a href="/" className=" hover:text-orange-500"><FaTwitter/></a>
-                    <button className=" bg-orange-500 ml-4 px-6 py-2 font-medium rounded hover:bg-white hover:text-orange-500 transition-all duration-200 ease-in">
+                    <button onClick={openModal} className=" bg-orange-500 ml-4 px-6 py-2 font-medium rounded hover:bg-white hover:text-orange-500 transition-all duration-200 ease-in">
                         Log in
                     </button>
                 </div>
+
+                    {/* {modal componnet } */}
+                    
+                    {
+                        isModalOpen && <Modal isModalOpen={isModalOpen} closeModal={closeModal}/>
+                    }
 
                 {/* {mobile menu btn, mobile screen} */}
                     <div className=" md:hidden">
