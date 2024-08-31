@@ -1,14 +1,14 @@
 
 function ContactDetails() {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen bg-gradient-to-r from-whitee to-orange-100 p-6">
+    <div className="flex mx-auto flex-col lg:flex-row items-center justify-center min-h-screen bg-gradient-to-r from-whitee to-orange-100 p-6">
       
     {/* بخش تصویر سمت چپ */}
-    <div className="lg:w-1/3 mb-10 lg:mb-0 flex justify-center">
+    <div className="lg:w-1/2 mb-10 lg:mb-0 flex justify-center">
       <img
         src="/src/assets/contact.png"
         alt="Contact Us"
-        className=" w-full  max-w-lg object-cover rounded-lg "
+        className=" w-full max-w-2xl object-cover rounded-lg "
       />
     </div>
     
