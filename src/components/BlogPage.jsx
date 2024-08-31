@@ -16,7 +16,7 @@ function BlogPage() {
    useEffect(() => {
     
 
-        let url = `/src/api/blogsData.json`
+        let url = `../api/blogsData.json`
         fetch(url)
       .then((response) => response.json())
       .then((data) => {
