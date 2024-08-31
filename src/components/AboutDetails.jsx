@@ -1,3 +1,8 @@
+import user1 from "../assets/user-01.png"
+import user2 from "../assets/user-02.png"
+import user3 from "../assets/user-03.png"
+import about from "../assets/about.png"
+
 
 function AboutDetails() {
   return (
@@ -6,7 +11,7 @@ function AboutDetails() {
          <div className="flex flex-col lg:flex-row items-center mb-8">
            <div className="flex-1 mb-4 lg:mb-0">
              <img
-               src="../assets/about.png"
+               src={about}
                alt="Team working"
                className="w-full h-auto rounded-lg shadow-lg"
              />
@@ -28,10 +33,10 @@ function AboutDetails() {
            <h2 className="text-2xl font-bold mb-4"> Top Authors</h2>
            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
              {[
-               { name: ' Adrio Devid', title: 'Operations manager', image: '../assets/user-01.png' },
-               { name: ' Rayna Mario', title: 'The editor', image: '../assets/user-02.png' },
-               { name: 'David Tac ', title: 'Head of Publications ', image: '../assets/user-03.png' },
-               { name: ' Mark Jacob', title: ' Head of Marketing', image: '../assets/user-01.png' }
+               { name: ' Adrio Devid', title: 'Operations manager', image: user1 },
+               { name: ' Rayna Mario', title: 'The editor', image: user2 },
+               { name: 'David Tac ', title: 'Head of Publications ', image: user3 },
+               { name: ' Mark Jacob', title: ' Head of Marketing', image: user1 }
              ].map((author, index) => (
                <div key={index} className="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center cursor-pointer mb-8 transition-all duration-200 hover:shadow-2xl">
                  <img src={author.image} alt={author.name} className="rounded-full w-24 h-24 mb-4" />

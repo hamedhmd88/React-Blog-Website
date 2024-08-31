@@ -1,3 +1,4 @@
+import contact from "../assets/contact.png"
 
 function ContactDetails() {
   return (
@@ -6,7 +7,7 @@ function ContactDetails() {
     {/* بخش تصویر سمت چپ */}
     <div className="lg:w-1/2 mb-10 lg:mb-0 flex justify-center">
       <img
-        src="../assets/contact.png"
+        src={contact}
         alt="Contact Us"
         className=" w-full max-w-2xl object-cover rounded-lg "
       />
