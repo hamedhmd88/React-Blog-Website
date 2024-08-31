@@ -9,7 +9,7 @@ function SingleBlog() {
     const [blog, setBlog] = useState(null)
     
     useEffect(() => {
-        fetch('/public/api/blogsData.json')
+        fetch('/src/api/blogsData.json')
         .then(response => response.json())
         .then(data => {
             const founBlog = data.find((b) => b.id === parseInt(id));
